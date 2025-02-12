@@ -33,7 +33,7 @@ jobs:
       - name: Execute extract script
         env:
           AZURE_CONN_STRING: ${{ secrets.AZURE_CONN_STRING }}
-          PGHOST: $ {{ secrets.PGHOST }}
+          PGHOST: ${{ secrets.PGHOST }}
           PGUSER: $ {{ secrets.PGUSER }} 
           PGPORT: ${{ secrets.PGPORT }}
           PGDATABASE: $ {{ secrets.PGDATABASE }}
