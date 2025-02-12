@@ -34,7 +34,7 @@ jobs:
         env:
           AZURE_CONN_STRING: ${{ secrets.AZURE_CONN_STRING }}
           PGHOST: ${{ secrets.PGHOST }}
-          PGUSER: $ {{ secrets.PGUSER }} 
+          PGUSER: ${{ secrets.PGUSER }}
           PGPORT: ${{ secrets.PGPORT }}
           PGDATABASE: $ {{ secrets.PGDATABASE }}
           PGPASSWORD: $ {{ secrets.PGPASSWORD }} 
