@@ -32,6 +32,12 @@ jobs:
       # Step 4: Execute extract script
       - name: Execute extract script
         env:
-          BLOB_CONN_STRING: ${{ secrets.BLOB_CONN_STRING }} # Set environment variable
+          AZURE_CONN_STRING: ${{ secrets.AZURE_CONN_STRING }} # Set environment variable
           CONN_STRING: ${{ secrets.CONN_STRING }} # Set environment variable
+          PGHOST: $ {{ secrets.PGHOST }}
+          PGUSER: $ {{ secrets.PGUSER }}  # ✅ Azure requires @server_name
+          PGPORT: $ {{ secrets.PGPORT }}
+          PGDATABASE: $ {{ secrets.PGDATABASE }}
+          PGPASSWORD: $ {{ secrets.PGPASSWORD }}  # ✅ If special characters cause issues, wrap it in quotes
+
         run: python main.py # Run the 'main.py' script
