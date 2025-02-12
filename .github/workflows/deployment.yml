@@ -40,3 +40,19 @@ jobs:
           PGPASSWORD: $ {{ secrets.PGPASSWORD }} 
 
         run: python main.py 
+        
+      - name: Debug Secrets
+        run: |
+          echo "AZURE_CONN_STRING is set: ${#AZURE_CONN_STRING}"
+          echo "PGHOST is set: ${#PGHOST}"
+          echo "PGUSER is set: ${#PGUSER}"
+          echo "PGPORT is set: ${#PGPORT}"
+          echo "PGDATABASE is set: ${#PGDATABASE}"
+          echo "PGPASSWORD is set: ${#PGPASSWORD}"
+        env:
+          AZURE_CONN_STRING: ${{ secrets.AZURE_CONN_STRING }}
+          PGHOST: ${{ secrets.PGHOST }}
+          PGUSER: ${{ secrets.PGUSER }}
+          PGPORT: ${{ secrets.PGPORT }}
+          PGDATABASE: ${{ secrets.PGDATABASE }}
+          PGPASSWORD: ${{ secrets.PGPASSWORD }}
